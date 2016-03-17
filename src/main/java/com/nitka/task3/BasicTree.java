@@ -19,6 +19,10 @@ public class BasicTree<T extends Comparable> {
     }
 
     public void insert(T data) {
+
+        if (data == null)
+            throw new IllegalArgumentException("Insertion data is not supposed to be null");
+
         root = insert(root, data);
     }
 
